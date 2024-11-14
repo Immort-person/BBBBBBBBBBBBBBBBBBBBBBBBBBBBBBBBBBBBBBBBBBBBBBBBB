@@ -41,7 +41,7 @@ namespace UserAuthApi.Controllers
 
 
         //Создать юзера
-        [HttpPost]
+        [HttpPost("create")]
         public ActionResult<User> PostUser(User user)
         {
             _context.Users.Add(user);
@@ -52,7 +52,7 @@ namespace UserAuthApi.Controllers
 
 
         //Редактировать
-        [HttpPut("{id}")]
+        [HttpPut("incorect")]
         public IActionResult PutUser(int id, User user)
         {
             if (id != user.Id)
